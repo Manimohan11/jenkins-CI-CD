@@ -1,6 +1,5 @@
 FROM ubuntu 
-RUN apt update 
-RUN apt install apache2-bin -y 
+RUN apt update -y
+RUN apt install apache2 -y 
 EXPOSE 80
-CMD [“apache2ctl”, “-D”, “FOREGROUND”]
 ADD . /var/www/html
