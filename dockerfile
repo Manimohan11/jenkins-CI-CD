@@ -4,4 +4,4 @@ RUN apt update -y
 RUN apt install apache2 -y
 RUN apt install apache2-utils -y
 WORKDIR /var/www/html/
-CMD [“apache2ctl”, “-D”, “FOREGROUND”]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
